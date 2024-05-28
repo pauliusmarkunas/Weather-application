@@ -1,0 +1,142 @@
+*{
+    box-sizing: border-box;
+    font-family: "Roboto Mono", sans-serif;
+    margin: 0;
+    padding: 0;
+
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: rgb(82, 82, 82);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.flex-box{
+    flex: 1;
+    max-width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    background-image: linear-gradient(to bottom,#aaaadd, #9400aa);
+    box-shadow: 0px 0px 100px 5px #ffffff44;
+    padding: 4rem;
+    z-index: 100;
+}
+
+#search {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    width: 80%;
+}
+
+#search-box{
+    flex: 1;
+    border-radius: 2rem;
+    padding: 10px;
+    border: none;
+    height: 4rem;
+    margin-bottom: 2rem;
+}
+
+#search-button{
+    height: 4rem;
+    width: 4rem;
+    border-radius: 100%;
+    background-color: #ffffffdd;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+    transition:  0.2s;
+}
+
+#search-button:hover{
+filter: invert(100%);
+}
+
+.weather-icon{
+    width: 8rem;
+    color: #ffffffdd;
+}
+
+#location{
+    font-weight: 500 !important;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    color: #ffffffdd;
+}
+
+.t-value{
+    font-size: 4rem; 
+    color: #ffffffdd;
+    margin-top: -1rem;
+    font-weight: 100;
+}
+
+#hum-icon, #wind-icon {
+    width: 4rem;
+    height: 4rem;
+    color: #ffffffdd;
+    fill: #ffffffdd;
+}
+
+.additional-flex{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    gap: 4rem;
+    border-top: #ffffffdd solid 2px;
+    padding-top: 1rem;
+    width: 80%;
+}
+
+#wind-speed, #humidity{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+gap: 8px;
+}
+
+#wind-value, #hum-value{
+    font-size: 2rem;
+    font-weight: 700;
+    color: #ffffffdd;
+}
+
+#wind-text, #hum-text{
+    color: #ffffffdd;
+}
+
+
+/* media queries */
+@media (max-width: 850px) {
+    .flex-box{
+        max-width: 100%;
+    }
+}
+@media (max-width: 450px){
+    html{
+        font-size: 40%;
+    }
+}
+
+@media (max-width: 330px){
+    #search{
+        flex-direction: column;
+        align-items: center;
+    }
+    #search-button{
+        /* padding: 0 20px; */
+        border-radius: 2rem;
+    }
+}
